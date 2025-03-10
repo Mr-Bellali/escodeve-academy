@@ -1,3 +1,5 @@
+export const runtime = "edge"
+
 const LoginPage = () => {
     return(
         <div>login page</div>

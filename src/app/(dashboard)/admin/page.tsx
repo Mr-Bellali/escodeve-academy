@@ -1,3 +1,5 @@
+export const runtime = "edge"
+
 import Announcements from "@/components/Announcements"
 import Attendance from "@/components/Attendance"
 import CountChart from "@/components/CountChart"
