@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal"
 import Pagination from "@/components/Pagination"
 import Table from "@/components/Table"
 import TableSearch from "@/components/TableSearch"
@@ -30,11 +31,6 @@ const columns = [
     {
         header: "Grade",
         accessor: "grade",
-        className: "hidden md:table-cell"
-    },
-    {
-        header: "Class",
-        accessor: "class",
         className: "hidden md:table-cell"
     },
     {
@@ -76,14 +72,17 @@ const StudentListPage = () => {
             <td className="hidden md:table-cell">{item.address}</td>
             <td>
                 <div className="flex items-center gap-2">
-                    <Link href={`/List/students/${item.id}`}>
+                    <Link href={`/list/students/${item.id}`}>
                         <button className="w-7 h-7 flex items-center justify-center rounded-full bg-esSky">
                             <Image src="/view.png" alt="" width={16} height={16} />
                         </button>
                     </Link>
-                    {role === "admin" && <button className="w-7 h-7 flex items-center justify-center rounded-full bg-esPurple">
-                        <Image src="/delete.png" alt="" width={16} height={16} />
-                    </button>}
+                    {role === "admin" && 
+                    // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-esPurple">
+                    //     <Image src="/delete.png" alt="" width={16} height={16} />
+                    // </button>
+                    <FormModal table="student" type="delete" id={item.id}/>
+                    }
                 </div>
             </td>
         </tr>
@@ -103,9 +102,12 @@ const StudentListPage = () => {
                         <button className="w-8 h-9 flex items-center justify-center rounded-full bg-esYellow">
                             <Image src="/sort.png" alt="" width={14} height={14} />
                         </button>
-                        {role === "admin" && (<button className="w-8 h-9 flex items-center justify-center rounded-full bg-esYellow">
-                            <Image src="/plus.png" alt="" width={14} height={14} />
-                        </button>)}
+                        {role === "admin" && (
+                            // <button className="w-8 h-9 flex items-center justify-center rounded-full bg-esYellow">
+                            // <Image src="/plus.png" alt="" width={14} height={14} />
+                            // </button>
+                            <FormModal table="student" type="create" />
+                    )}
                     </div>
                 </div>
             </div>

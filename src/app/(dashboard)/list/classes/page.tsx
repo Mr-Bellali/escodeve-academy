@@ -50,7 +50,7 @@ const ClassesListPage = () => {
             <td className="hidden md:table-cell">{item.supervisor}</td>
             <td>
                 <div className="flex items-center gap-2">
-                    <Link href={`/List/parents/${item.id}`}>
+                    <Link href={`/list/parents/${item.id}`}>
                         <button className="w-7 h-7 flex items-center justify-center rounded-full bg-esSky">
                             <Image src="/edit.png" alt="" width={16} height={16} />
                         </button>

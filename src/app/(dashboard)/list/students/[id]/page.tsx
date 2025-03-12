@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Performance from "@/components/Performance"
 
-const SingleTeacherPage = () => {
+const SingleStudentPage = () => {
   return (
     <div className="flex-1 p-4 flex flex-col gap-4 xl:flex-row">
       {/* LEFT */}
@@ -15,7 +15,7 @@ const SingleTeacherPage = () => {
           <div className="bg-esSky py-6 px-4 rounded-md flex-1 flex gap-4">
             <div className="w-1/3">
               <Image 
-                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200%27" 
+                src="https://images.pexels.com/photos/5414817/pexels-photo-5414817.jpeg?auto=compress&cs=tinysrgb&w=1200%27" 
                 alt="" 
                 width={144} 
                 height={144} 
@@ -23,8 +23,8 @@ const SingleTeacherPage = () => {
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-xl font-semibold">Leonard Synder</h1>
-              <p className="text-sm text-gray-500">physics and chemestry teacher</p>
+              <h1 className="text-xl font-semibold">Cameron Moran</h1>
+              <p className="text-sm text-gray-500">physics and chemestry student</p>
               <div className="flex items-center justify-start gap-2 flex-wrap text-xs font-medium">
                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2 ">
                   <Image src="/blood.png" alt="" width={14} height={14}/>
@@ -71,8 +71,8 @@ const SingleTeacherPage = () => {
                   className="w-6 h-6"
                 />
                 <div className="">
-                  <h1 className="text-xl font-semibold">2</h1>
-                  <span className="text-sm text-gray-400">Branches</span>
+                  <h1 className="text-xl font-semibold">6th</h1>
+                  <span className="text-sm text-gray-400">Grade</span>
                 </div>
               </div>
               {/* CARD */}
@@ -85,7 +85,7 @@ const SingleTeacherPage = () => {
                   className="w-6 h-6"
                 />
                 <div className="">
-                  <h1 className="text-xl font-semibold">6</h1>
+                  <h1 className="text-xl font-semibold">18</h1>
                   <span className="text-sm text-gray-400">Lessons</span>
                 </div>
               </div>
@@ -99,15 +99,15 @@ const SingleTeacherPage = () => {
                   className="w-6 h-6"
                 />
                 <div className="">
-                  <h1 className="text-xl font-semibold">6</h1>
-                  <span className="text-sm text-gray-400">Classes</span>
+                  <h1 className="text-xl font-semibold">6A</h1>
+                  <span className="text-sm text-gray-400">Class</span>
                 </div>
               </div>
           </div>
         </div>
         {/* BOTTOM */}
         <div className="mt-4 bg-white rounded-md p-4 h-[800px]">
-          <h1>Teacher&apos;s Shcedule</h1>
+          <h1>Student&apos;s Shcedule</h1>
           <BigCalendar />
         </div>
       </div>
@@ -116,11 +116,11 @@ const SingleTeacherPage = () => {
       <div className="bg-white p-4 rounded-md">
         <h1 className="text-xl font-semibold">Shortcuts</h1>
         <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
-          <Link className="p-3 rounded-md bg-esSkyLight " href="/">Teacher&apos; Classes</Link>
-          <Link className= "p-3 rounded-md bg-esPurpleLight " href="/">Teacher&apos; Students</Link>
-          <Link className="p-3 rounded-md bg-esYellowLight " href="/">Teacher&apos; Lessons</Link>
-          <Link className="p-3 rounded-md bg-pink-50 " href="/">Teacher&apos; Exams</Link>
-          <Link className="p-3 rounded-md bg-esSkyLight " href="/">Teacher&apos; Assignements</Link>
+          <Link className="p-3 rounded-md bg-esSkyLight " href="/">Student&apos; Lessons</Link>
+          <Link className= "p-3 rounded-md bg-esPurpleLight " href="/">Student&apos; Teachers</Link>
+          <Link className="p-3 rounded-md bg-esYellowLight " href="/">Student&apos; Results</Link>
+          <Link className="p-3 rounded-md bg-pink-50 " href="/">Student&apos; Exams</Link>
+          <Link className="p-3 rounded-md bg-esSkyLight " href="/">Student&apos; Assignements</Link>
         </div>
       </div>
         <Performance  /> 
@@ -130,4 +130,4 @@ const SingleTeacherPage = () => {
   )
 }
 
-export default SingleTeacherPage
+export default SingleStudentPage
